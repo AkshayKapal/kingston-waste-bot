@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kingston Waste Assistant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 id="ui_title">🗑️ Kingston Waste Collection Assistant</h1>
+      <p id="ui_subtitle">Ask me anything about your waste, recycling, and organics pickup!</p>
+      <a class="lang-link" href="language.html" id="ui_change_lang">Change language</a>
+    </header>
+
+    <div class="chat-container" id="chatContainer">
+      <div class="message assistant">
+        <p id="ui_intro">Hi! I can help you with waste collection in Kingston. Try asking:</p>
+        <ul>
+          <li id="ui_ex1">"When is my next garbage pickup on Princess Street?"</li>
+          <li id="ui_ex2">"Where do batteries go?"</li>
+          <li id="ui_ex3">"Can I recycle a pizza box?"</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Ask about your waste collection..."
+        onkeypress="if(event.key==='Enter') sendMessage()"
+        autocomplete="off"
+      />
+      <button onclick="sendMessage()" id="ui_send">Send</button>
+    </div>
+
+    <div class="disclaimer">
+      <small id="ui_disclaimer">Demo for Kingston AI Collective Hackathon • Data may not reflect current schedules</small>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

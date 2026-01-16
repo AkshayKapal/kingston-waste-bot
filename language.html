@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select Language • Kingston Waste Assistant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container" style="height:auto; min-height: 70vh;">
+    <header>
+      <h1> Kingston Waste Collection Assistant</h1>
+      <p>Choose your language to continue</p>
+    </header>
+
+    <div style="padding: 24px; background: #f8f9fa; flex: 1;">
+      <div class="message assistant" style="max-width: 100%;">
+        <p>
+          This demo can switch the interface language. Your selection is stored only in your browser.
+        </p>
+      </div>
+
+      <div class="lang-grid">
+        <button class="lang-btn" onclick="chooseLang('en')">English</button>
+        <button class="lang-btn" onclick="chooseLang('fr')">Français</button>
+        <button class="lang-btn" onclick="chooseLang('es')">Español</button>
+        <button class="lang-btn" onclick="chooseLang('zh')">中文</button>
+      </div>
+
+      <p class="muted" style="margin-top: 14px;">
+        You can change language anytime using the link on the chat page.
+      </p>
+    </div>
+
+    <div class="disclaimer">
+      <small>Demo for Kingston Civic Hackathon • Accessibility & inclusion focus</small>
+    </div>
+  </div>
+
+  <script>
+    function chooseLang(lang) {
+      localStorage.setItem("kw_lang", lang);
+      window.location.href = "chat.html";
+    }
+  </script>
+</body>
+</html>
